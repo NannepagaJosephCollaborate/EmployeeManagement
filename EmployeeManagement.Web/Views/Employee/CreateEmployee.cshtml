@@ -1,0 +1,19 @@
+﻿@model Employee
+@{
+    ViewData["Title"] = "Employee Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Create Employee</h1>
+    <form method="POST" asp-controller="Employee" asp-action="CreateEmployee">
+        <label>Name</label>
+        <input asp-for="@Model.Name" /><br/>
+
+        <label>Department</label>
+        <input asp-for="@Model.Department" /><br />
+
+        <label>Salary</label>
+        <input asp-for="@Model.Salary" /><br />
+        <input type="submit"/>
+    </form>
+</div>
